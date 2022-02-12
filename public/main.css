@@ -1,1 +1,54 @@
-/* No CSS *//*# sourceMappingURL=main.css.map */
+.header-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 1920px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 90%;
+}
+
+.header-container--logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #EDF6F9;
+  cursor: pointer;
+}
+
+.header-container--login {
+  font-weight: 500;
+  font-size: 1.2rem;
+  background-color: #83C5BE;
+  padding: 0.7rem 1.5rem 0.7rem 1.5rem;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  border-radius: 2rem;
+  cursor: pointer;
+  color: #FFFFFF;
+}
+
+.header-container--login:hover {
+  background-color: #E29578;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+header {
+  height: 7rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #006D77;
+  width: 100%;
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,1 +1,15 @@
 @import "utilities/variables";
+@import "components/header";
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    height: 7rem;
+    display: flex;
+    justify-content: center;
+    background-color: $dark-blue;
+    width: 100%;
+}
