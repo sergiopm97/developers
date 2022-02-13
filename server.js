@@ -1,4 +1,5 @@
 const express = require("express");
+const database = require("./database");
 const bodyParser = require("body-parser");
 require("dotenv").config();
 
@@ -15,6 +16,9 @@ server.use("/register", (req, res)  => {
     res.render("register");
 });
 
-server.listen(PORT, () => {
-    console.log(`\n-> Server listening on port ${PORT}`);
+database.connectDatabase().then(() => {
+    console.log("\n-> Connected to the database...");
+    server.listen(PORT, () => {
+        console.log(`-> Server listening on port ${PORT}\n`);
+    });
 });
