@@ -55,7 +55,9 @@
                     font-family: 'Roboto', sans-serif;
                     background-color: $light-blue;
                     transition: 0.2s ease;
+                    color: $medium-blue;
                     padding-left: 1rem;
+                    font-size: 1rem;
                     border: none;
 
                     &:focus {
