@@ -8,8 +8,8 @@ server.set("view engine", "ejs");
 server.use(express.urlencoded({ extended: true }));
 server.use(express.static("public"));
 
-server.use("/", (req, res)  => {
-    res.render("index");
+server.use("/register", (req, res)  => {
+    res.render("register");
 });
 
 server.listen(PORT, () => {
