@@ -4,35 +4,35 @@
   display: flex;
   max-width: 1920px;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   width: 90%;
 }
 
 .header-container--logo {
   font-size: 2rem;
   font-weight: 700;
-  color: #EDF6F9;
+  color: #edf6f9;
   cursor: pointer;
 }
 
 .header-container--login {
   font-weight: 500;
   font-size: 1.2rem;
-  background-color: #83C5BE;
+  background-color: #83c5be;
   padding: 0.7rem 1.5rem 0.7rem 1.5rem;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
   border-radius: 2rem;
   cursor: pointer;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .header-container--login:hover {
-  background-color: #E29578;
+  background-color: #e29578;
 }
 
 .form-container {
@@ -41,15 +41,15 @@
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   height: calc(100vh - 7rem);
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   width: 100%;
 }
 
@@ -59,10 +59,10 @@
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   height: 80%;
 }
 
@@ -77,12 +77,12 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   width: 35%;
 }
 
@@ -90,12 +90,12 @@
   margin: 0;
   font-size: 3.5rem;
   text-align: center;
-  color: #006D77;
+  color: #006d77;
 }
 
 .form-container__content__register--subtitle {
   text-align: center;
-  color: #83C5BE;
+  color: #83c5be;
 }
 
 .form-container__content__register__input-block {
@@ -104,58 +104,58 @@
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   margin-bottom: 1rem;
 }
 
 .form-container__content__register__input-block--title {
   font-size: 1.5rem;
-  color: #006D77;
+  color: #006d77;
 }
 
 .form-container__content__register__input-block--input {
   height: 3rem;
   margin-top: 1rem;
   border-radius: 5rem;
-  outline: solid 0 #FFDDD2;
-  font-family: 'Roboto', sans-serif;
-  background-color: #EDF6F9;
+  outline: solid 0 #ffddd2;
+  font-family: "Roboto", sans-serif;
+  background-color: #edf6f9;
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
-  color: #83C5BE;
+  color: #83c5be;
   padding-left: 1rem;
   font-size: 1rem;
   border: none;
 }
 
 .form-container__content__register__input-block--input:focus {
-  outline: solid 0.2rem #FFDDD2;
+  outline: solid 0.2rem #ffddd2;
 }
 
 .form-container__content__register__input-block--input::-webkit-input-placeholder {
-  color: #83C5BE;
+  color: #83c5be;
 }
 
 .form-container__content__register__input-block--input:-ms-input-placeholder {
-  color: #83C5BE;
+  color: #83c5be;
 }
 
 .form-container__content__register__input-block--input::-ms-input-placeholder {
-  color: #83C5BE;
+  color: #83c5be;
 }
 
 .form-container__content__register__input-block--input::placeholder {
-  color: #83C5BE;
+  color: #83c5be;
 }
 
 .form-container__content__register--submit {
   height: 3rem;
-  color: #FFFFFF;
+  color: #ffffff;
   margin-top: 1rem;
   border-radius: 5rem;
-  font-family: 'Roboto', sans-serif;
-  background-color: #006D77;
+  font-family: "Roboto", sans-serif;
+  background-color: #006d77;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
   font-size: 1.2rem;
@@ -166,12 +166,12 @@
 }
 
 .form-container__content__register--submit:hover {
-  background-color: #E29578;
+  background-color: #e29578;
 }
 
 body {
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 header {
@@ -180,9 +180,9 @@ header {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background-color: #006D77;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: #006d77;
   width: 100%;
 }
 /*# sourceMappingURL=main.css.map */
