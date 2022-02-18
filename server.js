@@ -1,6 +1,7 @@
 const express = require("express");
 const database = require("./database");
 const bodyParser = require("body-parser");
+const Developer = require("./models/Developer");
 require("dotenv").config();
 
 const server = express();
@@ -12,8 +13,19 @@ server.set("view engine", "ejs");
 server.use(express.urlencoded({ extended: true }));
 server.use(express.static("public"));
 
-server.use("/register", (req, res) => {
+server.get("/register", (_req, res) => {
   res.render("register");
+});
+
+server.post("/register", (req, res) => {
+  const newDeveloper = Developer({
+    name: req.body.name,
+    email: req.body.email,
+    password: req.body.password,
+  });
+  return newDeveloper.save().then(() => {
+    res.status(201).redirect("/login");
+  });
 });
 
 database.connectDatabase().then(() => {
