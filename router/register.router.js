@@ -10,7 +10,7 @@ router.get("/", (_req, res) => {
 router.post("/", async (req, res) => {
   const existingDeveloper = await Developer.findOne({ email: req.body.email });
   if (existingDeveloper) {
-    return res.status(409).json({ status: "the email is already in use" });
+    return res.status(409).send(`Developer with email ${req.body.email} already exists in the database...`);
   }
   const newDeveloper = Developer({
     name: req.body.name,
