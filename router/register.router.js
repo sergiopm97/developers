@@ -4,10 +4,14 @@ const Developer = require("../models/Developer");
 const router = express.Router();
 
 router.get("/", (_req, res) => {
-  res.render("register");
+  res.status(200).render("register");
 });
 
-router.post("/", (req, res) => {
+router.post("/", async (req, res) => {
+  const existingDeveloper = await Developer.findOne({ email: req.body.email });
+  if (existingDeveloper) {
+    return res.status(409).json({ status: "the email is already in use" });
+  }
   const newDeveloper = Developer({
     name: req.body.name,
     email: req.body.email,
