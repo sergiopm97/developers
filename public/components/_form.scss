@@ -1,0 +1,93 @@
+.form-container {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 7rem);
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  &__content {
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80%;
+
+    &--image {
+      height: 90%;
+      width: 35%;
+    }
+
+    &__register {
+      height: 90%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      width: 35%;
+
+      &--title {
+        margin: 0;
+        font-size: 3.5rem;
+        text-align: center;
+        color: $dark-blue;
+      }
+
+      &--subtitle {
+        text-align: center;
+        color: $medium-blue;
+      }
+
+      &__input-block {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1rem;
+
+        &--title {
+          font-size: 1.5rem;
+          color: $dark-blue;
+        }
+
+        &--input {
+          height: 3rem;
+          margin-top: 1rem;
+          border-radius: 5rem;
+          outline: solid 0 $light-red;
+          font-family: "Roboto", sans-serif;
+          background-color: $light-blue;
+          transition: 0.2s ease;
+          color: $medium-blue;
+          padding-left: 1rem;
+          font-size: 1rem;
+          border: none;
+
+          &:focus {
+            outline: solid 0.2rem $light-red;
+          }
+
+          &::placeholder {
+            color: $medium-blue;
+          }
+        }
+      }
+
+      &--submit {
+        height: 3rem;
+        color: $white;
+        margin-top: 1rem;
+        border-radius: 5rem;
+        font-family: "Roboto", sans-serif;
+        background-color: $dark-blue;
+        transition: 0.5s ease;
+        font-size: 1.2rem;
+        font-weight: 500;
+        cursor: pointer;
+        border: none;
+        width: 100%;
+
+        &:hover {
+          background-color: $medium-red;
+        }
+      }
+    }
+  }
+}

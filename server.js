@@ -1,9 +1,25 @@
 const express = require("express");
+const database = require("./database");
+const bodyParser = require("body-parser");
+const registerRouter = require("./router/register.router");
+const developersRouter = require("./router/developers.router");
 require("dotenv").config();
 
 const server = express();
 const PORT = process.env.PORT || 80;
 
-server.listen(PORT, () => {
-    console.log(`\n-> Server listening on port ${PORT}`);
+server.use(bodyParser.json());
+
+server.set("view engine", "ejs");
+server.use(express.urlencoded({ extended: true }));
+server.use(express.static("public"));
+
+server.use("/register", registerRouter);
+server.use("/api/developers", developersRouter);
+
+database.connectDatabase().then(() => {
+  console.log("\n-> Connected to the database...");
+  server.listen(PORT, () => {
+    console.log(`-> Server listening on port ${PORT}\n`);
+  });
 });
