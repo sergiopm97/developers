@@ -3,6 +3,7 @@ const database = require("./database");
 const bodyParser = require("body-parser");
 const registerRouter = require("./router/register.router");
 const developersRouter = require("./router/developers.router");
+const loginRouter = require("./router/login.router");
 require("dotenv").config();
 
 const server = express();
@@ -15,6 +16,7 @@ server.use(express.urlencoded({ extended: true }));
 server.use(express.static("public"));
 
 server.use("/register", registerRouter);
+server.use("/login", loginRouter);
 server.use("/api/developers", developersRouter);
 
 database.connectDatabase().then(() => {

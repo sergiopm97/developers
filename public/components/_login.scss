@@ -1,0 +1,88 @@
+.login-container {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 7rem);
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  &__content {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    background-color: $dark-blue;
+    justify-content: center;
+    border-radius: 2rem;
+    height: 75%;
+
+    &--title {
+      font-size: 3.5rem;
+      color: $light-blue;
+      text-align: center;
+      margin: 0;
+    }
+
+    &--subtitle {
+      text-align: center;
+      color: $light-blue;
+    }
+
+    &__input-block {
+      display: flex;
+      padding: 0rem 5rem 0rem 5rem;
+      flex-direction: column;
+      margin-bottom: 1.5rem;
+
+      &--title {
+        font-size: 1.5rem;
+        color: $light-blue;
+        margin-bottom: 1rem;
+      }
+
+      &--input {
+        height: 3rem;
+        border-radius: 5rem;
+        outline: solid 0 $light-red;
+        font-family: "Roboto", sans-serif;
+        background-color: $light-blue;
+        transition: 0.2s ease;
+        color: $medium-blue;
+        padding-left: 1rem;
+        font-size: 1rem;
+        border: none;
+
+        &:focus {
+          outline: solid 0.2rem $medium-blue;
+        }
+
+        &::placeholder {
+          color: $medium-blue;
+        }
+      }
+    }
+
+    &__submit-container {
+      margin: auto;
+      width: calc(100% - 10rem);
+
+      &--submit {
+        width: 100%;
+        height: 3rem;
+        color: $white;
+        margin-top: 1rem;
+        border-radius: 5rem;
+        font-family: "Roboto", sans-serif;
+        background-color: $medium-blue;
+        transition: 0.5s ease;
+        font-size: 1.2rem;
+        font-weight: 500;
+        cursor: pointer;
+        border: none;
+
+        &:hover {
+          background-color: $medium-red;
+        }
+      }
+    }
+  }
+}
