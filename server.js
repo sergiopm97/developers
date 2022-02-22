@@ -4,10 +4,29 @@ const bodyParser = require("body-parser");
 const registerRouter = require("./router/register.router");
 const developersRouter = require("./router/developers.router");
 const loginRouter = require("./router/login.router");
+const MongoStore = require("connect-mongo");
+const session = require("express-session");
+const passport = require("passport");
+require("./authentication/passport");
 require("dotenv").config();
 
 const server = express();
 const PORT = process.env.PORT || 80;
+
+server.use(
+  session({
+    store: MongoStore.create({ mongoUrl: database.databaseUrl }),
+    secret: "developers-secret",
+    saveUninitialized: false,
+    resave: false,
+    cookie: {
+      maxAge: 300000,
+    },
+  })
+);
+
+server.use(passport.initialize());
+server.use(passport.session());
 
 server.use(bodyParser.json());
 

@@ -7,4 +7,4 @@ const connectDatabase = () => {
   return mongoose.connect(databaseUrl, { useNewUrlParser: true, useUnifiedTopology: true });
 };
 
-module.exports = { connectDatabase };
+module.exports = { connectDatabase, databaseUrl };
